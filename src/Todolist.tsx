@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from './Button';
 
 type Props = {
     title: string
@@ -34,9 +35,12 @@ export const Todolist = ({ title, tasks }: Props) => {
                     <li><input type="checkbox" checked={tasks[2].isDone}/> <span>{tasks[2].title}</span></li> */}
             </ul>
             <div>
-                <button>All</button>
+                <Button title={'All'}/>
+                <Button title={'Active'}/>
+                <Button title={'Completed'}/>
+                {/* <button>All</button>
                 <button>Active</button>
-                <button>Completed</button>
+                <button>Completed</button> */}
             </div>
         </div>
     )
